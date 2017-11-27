@@ -1,9 +1,19 @@
+
+
+
+
+
+
+
 /*
 As a part of this warmup, you need to create three functions that one needs to be able to call upon an array:
 
 all
 
 This function returns true only if the predicate supplied returns true for all the items in the array
+
+
+
 
 [1, 2, 3].all(isGreaterThanZero) => true
 [-1, 0, 2].all(isGreaterThanZero) => false
@@ -51,7 +61,7 @@ Array.prototype.none = function (p) {
   for (var i = 0 ; i < this.length ; i++) {
     currentIndex = this[i]
     if (p(currentIndex) !== true) {
-      count +=1 
+      count +=1
     };
   }
   if (count !== this.length) {
@@ -75,7 +85,7 @@ Array.prototype.any = function (p) {
       currentIndex = this[i]
       if (p(currentIndex) === true) {
         console.log(p(currentIndex),"true is true")
-        count +=1 
+        count +=1
       };
     }
     if (count > 0) {
@@ -99,7 +109,7 @@ function isLessThanZero (num) {
   return num < 0;
 }
 
-// write some of your own invocations below, 
+// write some of your own invocations below,
 // do your results match the original expected results?
 // YOUR CODE HERE
 

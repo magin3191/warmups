@@ -1,3 +1,31 @@
+Array.prototype.all = function (p) {
+  for (var i = 0 ; i < this.length ; i++) {
+    if (p(this[i]) === false) {
+      return false
+    };
+  }
+  return true
+};
+
+Array.prototype.all = function(p){
+  let result = this.filter(p)
+  return result.length ===this.length
+}
+
+
+Array.prototype.none=function(p){
+  let result = this.filter(p)
+  return result.length == 0
+}
+
+Array.prototype.any=function(p){
+  let result = this.filter(p)
+  return result.length > 0
+}
+
+
+
+
 /*
 As a part of this warmup, you need to create three functions that one needs to be able to call upon an array:
 
@@ -50,9 +78,11 @@ function isLessThanZero (num) {
   return num < 0;
 }
 
-// write some of your own invocations below, 
+// write some of your own invocations below,
 // do your results match the original expected results?
 // *** YOUR CODE HERE ***
+
+
 
 module.exports = {
   arrayObj: Array,
